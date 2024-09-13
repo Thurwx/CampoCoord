@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geocodificação com Autocompletar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Obter Latitude e Longitude</h2>
+        <div class="input-container">
+            <input type="text" id="address" placeholder="Digite o endereço">
+            <button id="clear-btn" onclick="clearInput()">✖</button>
+        </div>
+        <ul id="suggestion-list"></ul>
+        <button id="obtain-coordinates" onclick="getCoordinates()">Obter Coordenadas</button>
+
+        <div class="result" id="result"></div>
+    </div>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

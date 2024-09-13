@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px; /* Aumentar o tamanho máximo do container */
+}
+
+.input-container {
+    display: flex;
+    align-items: center; /* Alinhar verticalmente o botão e o campo de entrada */
+    justify-content: space-between; /* Espaço entre o campo de entrada e o botão de obter coordenadas */
+    width: 100%; /* Tornar o container de entrada responsivo */
+    max-width: 100%; /* Permitir que o container ocupe 100% da largura disponível */
+    margin: 0 auto; /* Centralizar horizontalmente o container */
+    position: relative; /* Posicionar o botão clear relativo ao container */
+}
+
+input[type="text"] {
+    padding: 10px;
+    flex: 1; /* Permitir que o campo de entrada ocupe o máximo de espaço disponível */
+    font-size: 16px;
+    margin-right: 10px; /* Espaço entre o campo de entrada e o botão clear */
+}
+
+#clear-btn {
+    position: absolute;
+    right: 10px; /* Ajustar a distância do botão da borda direita do campo de entrada */
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    display: none; /* Inicialmente escondido */
+}
+
+#clear-btn:hover {
+    color: #000;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-bottom-left-radius: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button#clear-btn {
+    margin-left: 10px; /* Espaço entre o botão clear e o campo de entrada */
+}
+
+button#obtain-coordinates {
+    margin-top: 10px;
+}
+
+.result {
+    margin-top: 20px;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Estilo para a lista de sugestões */
+#suggestion-list {
+    margin-top: 10px;
+    max-width: 300px;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+#suggestion-list li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+#suggestion-list li:hover {
+    background-color: #ddd;
+}
